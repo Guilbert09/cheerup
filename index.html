@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reveal Effect</title>
+    <link rel="stylesheet" href="design.css">
+    <style>
+        /* Add any additional CSS styling here */
+        #h1 {
+            position: absolute;
+            left: -150px;
+            transform: rotate(7deg);
+        }
+
+        #h3 {
+            position: absolute;
+            right: -140px;
+            transform: rotate(-7deg);
+        }
+
+        .video-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .video-container iframe {
+            margin: 0 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="h1"></div>
+        <div id="h3"></div>
+        <div class="reveal">
+            <div class="revealleft"></div>
+            <div class="revealright"></div>
+            <button id="toggleButton" onclick="toggleReveal()">Open</button>
+            <h1>Cheer up Guilbert!</h1>
+            <p>
+                <br>Hey there, </br>
+
+
+                <br>I know right now it feels like the world has turned upside down and the pain seems unbearable. But let
+                me remind you, you're not alone.</br>
+
+
+                <br>Take this time to heal. Allow yourself to feel every emotion, whether it's sadness, anger, or confusion.
+                It's okay to not be okay. Surround yourself with people who uplift you, who remind you of your worth,
+                and who stand by you no matter what.</br>
+
+                <br>Remember, this pain won't last forever. You're stronger than you know, and this experience will only
+                make you more resilient. Trust that in time, the pieces of your heart will mend, and you'll emerge from
+                this stronger, wiser, and ready to embrace new beginnings.</br>
+
+                <br>Hang in there. You've got this.</br>
+
+
+                <div class="video-container">
+                    <iframe width="500" height="300" src="https://www.youtube.com/embed/FpPRkCQtM_U" frameborder="0" allowfullscreen></iframe>
+                    
+                </div>
+
+            </p>
+
+        </div>
+    </div>
+
+    <!-- Include any necessary scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        // Define the function to toggle reveal
+        function toggleReveal() {
+            $('.revealleft, .revealright').toggleClass('revealed');
+            var buttonText = $('#toggleButton').text();
+            $('#toggleButton').text(buttonText === 'Open' ? 'Close' : 'Open');
+        }
+    </script>
+</body>
+
+</html>
